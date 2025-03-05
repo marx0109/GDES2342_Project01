@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookNook</title>
+    <link rel="icon" type="image/png" href="images\favicon.png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style2.css">
+    <link rel="stylesheet" href="book_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <div class="wrapper">
+    <header class="header-nav">
+
+        <!-- right side of logo -->
+
+        <ul class="nav-left">
+            <li><a href="../product_page.html"> Shop all <span class="arrow">&#9660;</span></a></li>
+            <li><a href="#">My Nooks<span class="arrow">&#9660;</span></a></li>
+            <li><a href="#">Community<span class="arrow">&#9660;</span></a></li>
+            <li><a href="#">Explore<span class="arrow">&#9660;</span></a></li>
+        </ul>
+
+        <div class="logo">
+            <a href="..\index.html">
+            <img src="..\images\nav\logo.png" alt="Logo">
+        </a></div>
+
+        <!-- right side of logo -->
+
+        <ul class="nav-right">
+            <li><a href="#">
+                <img src="../images\nav\Search bar.png" alt="Login" height="30">
+            </a></li>
+
+            <li><a href="#">
+                <img src="../images\nav\person.png" alt="Login" height="30">
+            </a></li>
+
+            <li><a href="#">
+                <img src="../images\nav\heart.png" alt="favorites" height="30">
+            </a></li>
+
+            <li><a href="#">
+                <img src="../images\nav\cart.png" alt="shopping cart" height="30">
+            </a></li>
+        </ul>
+
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            ☰ <!-- Unicode hamburger icon (or replace with an SVG) -->
+        </div>
+    </header>
+
+    <div class="book-details">
+        <main>
+            <img class="book" src="..\images\books\book1-flat.png" alt="A Little Life" height="400px">
+            <div class="text">
+                <h1> A Little Life - a novel</h1>
+                <p> by Hanya Yanagihara </p>
+                <img class="ratings" src="ratings.png" alt="ratings and reviews" height="30px">
+                <hr class="divider">
+                <h3>Condition:</h3>
+                <div class="buttons">
+                    <img src="category_buttons\new.png" alt="new">
+                    <img src="category_buttons\used.png" alt="used">
+                    <img src="category_buttons\signed.png" alt="signed">
+                </div>
+                <h3>Format:</h3>
+                <div class="buttons">
+                    <img src="category_buttons\hardcover.png" alt="hardcover">
+                    <img src="category_buttons\paperback.png" alt="paperback">
+                    <img src="category_buttons\ebook.png" alt="ebook">
+                    <img src="category_buttons\audiobook.png" alt="audiobook">
+                </div>
+
+                <h2>$16.99</h2>
+                <div class="buttons">
+                    <img src="category_buttons\add_cart.png" alt="add to cart">
+                    <img src="category_buttons\add_wishlist.png" alt="add to wishlist">
+                </div>
+            </div>
+            
+        </main>
+        <div class="description">
+            <h3>Description</h3>
+            <p>
+                When four classmates from a small Massachusetts college move to New York to make their way,
+                they're broke, adrift, and buoyed only by their friendship and ambition.
+                There is kind, handsome Willem, an aspiring actor; JB, a quick-witted, sometimes cruel
+                Brooklyn-born painter seeking entry to the art world; Malcolm, a frustrated architect at a prominent firm;
+                and withdrawn, brilliant, enigmatic Jude, who serves as their center of gravity.
+            </p>
+            <p>
+                Over the decades, their relationships deepen and darken, tinged by addiction, success, and pride.
+                Yet their greatest challenge, each comes to realize, is Jude himself, by midlife a terrifyingly
+                talented litigator yet an increasingly broken man, his mind and body scarred by an unspeakable childhood,
+                and haunted by what he fears is a degree of trauma that he’ll not only be unable to overcome—but that
+                will define his life forever.
+            </p>
+        </div>
+
+        
+        
+        <div class="cart">
+            <h2>Cart Preview</h2>
+            <p><u>go to cart</u></p>
+            <img class="book" src="..\images\books\book1-flat.png" alt="A Little Life">
+            <img src="amount_cart.png" alt="amount of books in cart">
+            <img class="book" src="..\images\books\book1-flat.png" alt="A Little Life">
+            <img src="amount_cart.png" alt="amount of books in cart">
+            <img class="book" src="..\images\books\book1-flat.png" alt="A Little Life">
+            <img src="amount_cart.png" alt="amount of books in cart">
+            <img class="book" src="..\images\books\book1-flat.png" alt="A Little Life">
+            <img src="amount_cart.png" alt="amount of books in cart">
+        </div>
+    </div>
+
+    <h2 class="section-header">Recommended</h2>
+        <div class="section-description">
+            <p>other readers of <i>A Little Life</i> also read...</p>
+            <a class="view-more" href="#">view all</a>
+        </div>
+
+    <div class="book-section">
+        <div class="book-container">
+            <button class="scroll-left">&lt;</button>
+            <div class="book-row">
+                <a href="book1.html" class="book-item">
+                    <img src="..\images\books\book1.png" alt="A Little Life">
+                    <p class="book-title">The Great Gatsby</p>
+                    <p class="book-author">F. Scott Fitzgerald</p>
+                </a>
+                <a href="book2.html" class="book-item">
+                    <img src="..\images\books\book2.png" alt="Book 2">
+                    <p class="book-title">To Kill a Mockingbird</p>
+                    <p class="book-author">Harper Lee</p>
+                </a>
+                <a href="book3.html" class="book-item">
+                    <img src="..\images\books\book3.png" alt="Book 3">
+                    <p class="book-title">1984</p>
+                    <p class="book-author">George Orwell</p>
+                </a>
+                <a href="book4.html" class="book-item">
+                    <img src="..\images\books\book4.png" alt="Book 4">
+                    <p class="book-title">Moby-Dick</p>
+                    <p class="book-author">Herman Melville</p>
+                </a>
+                <a href="book5.html" class="book-item">
+                    <img src="..\images\books\book5.png" alt="Book 5">
+                    <p class="book-title">Pride and Prejudice</p>
+                    <p class="book-author">Jane Austen</p>
+                </a>
+                <a href="book6.html" class="book-item">
+                    <img src="..\images\books\book6.png" alt="Book 6">
+                    <p class="book-title">The Catcher in the Rye</p>
+                    <p class="book-author">J.D. Salinger</p>
+                </a>
+                <a href="book7.html" class="book-item">
+                    <img src="..\images\books\book7.png" alt="Book 7">
+                    <p class="book-title">The Hobbit</p>
+                    <p class="book-author">J.R.R. Tolkien</p>
+                </a>
+                <a href="book8.html" class="book-item">
+                    <img src="..\images\books\book8.png" alt="Book 7">
+                    <p class="book-title">The Hobbit</p>
+                    <p class="book-author">J.R.R. Tolkien</p>
+                </a>
+                <a href="book9.html" class="book-item">
+                    <img src="..\images\books\book1.png" alt="Book 1">
+                    <p class="book-title">The Great Gatsby</p>
+                    <p class="book-author">F. Scott Fitzgerald</p>
+                </a>
+                <a href="book10.html" class="book-item">
+                    <img src="..\images\books\book2.png" alt="Book 2">
+                    <p class="book-title">To Kill a Mockingbird</p>
+                    <p class="book-author">Harper Lee</p>
+                </a>
+                <a href="book11.html" class="book-item">
+                    <img src="..\images\books\book3.png" alt="Book 3">
+                    <p class="book-title">1984</p>
+                    <p class="book-author">George Orwell</p>
+                </a>
+                <a href="book12.html" class="book-item">
+                    <img src="..\images\books\book4.png" alt="Book 4">
+                    <p class="book-title">Moby-Dick</p>
+                    <p class="book-author">Herman Melville</p>
+                </a>
+                <a href="book13.html" class="book-item">
+                    <img src="..\images\books\book5.png" alt="Book 5">
+                    <p class="book-title">Pride and Prejudice</p>
+                    <p class="book-author">Jane Austen</p>
+                </a>
+                <a href="book14.html" class="book-item">
+                    <img src="..\images\books\book6.png" alt="Book 6">
+                    <p class="book-title">The Catcher in the Rye</p>
+                    <p class="book-author">J.D. Salinger</p>
+                </a>
+                <a href="book15.html" class="book-item">
+                    <img src="..\images\books\book7.png" alt="Book 7">
+                    <p class="book-title">The Hobbit</p>
+                    <p class="book-author">J.R.R. Tolkien</p>
+                </a>
+            </div>
+            <button class="scroll-right">&gt;</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>2025 BookNook Corporation </p>
+    </footer>
+    </div>
+</body>

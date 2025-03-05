@@ -1,0 +1,274 @@
+.text h2{
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+.text h3{
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    color: white;
+    background-color: black;
+}
+
+.arrow {
+    font-size: 10px;
+    margin-left: 2px;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    padding-top: 20px;
+}
+
+.first-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.second-row{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    padding-top: 10px;
+    overflow: hidden;
+}
+
+.half-logo{
+    flex-shrink: 0;
+    padding-right: 10px;
+    padding-bottom: 30px;
+}
+
+.half-logo2{
+    flex-shrink: 0;
+    padding-bottom: 30px;
+}
+
+.book img{
+    padding-top: 10px;
+    height: 250px;
+}
+
+.book img:hover {
+    transform: scale(1.05);
+}
+
+.top-books, .lower-books {
+    display:flex;
+    overflow: hidden;
+    white-space: nowrap;
+    gap: 10px;
+    width: 100%
+}
+
+.lower-books {
+    display: flex;
+    flex-direction: row-reverse; /* Books flow right-to-left */
+    overflow: hidden; /* Hides books that go off-screen on the left */
+    white-space: nowrap; /* Prevents wrapping */
+    gap: 10px;
+    flex-grow: 1; /* Allows books to fill space */
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.shop-now{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+    80% {
+        transform: translateX(-20px); /* Slight overshoot */
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100vw);
+        opacity: 0;
+    }
+    80% {
+        transform: translateX(20px); /* Slight overshoot */
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Apply animations */
+.top-books {
+    animation: slideInFromRight 1s ease-out forwards;
+}
+
+/* Left & Right Navigation Menus */
+.nav-left, .nav-right{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-right{
+    float: right;
+    padding-right: 20px;
+}
+
+
+/* Navbar links */
+.nav-left a, .nav-right a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-left a:hover, .nav-right a:hover {
+    color: #C64F4F;
+}
+
+/* Center Logo */
+.logo {
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo img {
+    height: 50px;
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+}
+
+/* Responsive Design: Mobile View */
+@media screen and (max-width: 570px) {
+    /* Move Logo to the Top */
+    .logo {
+        padding-top: 2px;
+        padding-left: 10px;
+        position: static;  /* Remove absolute positioning */
+        transform: none;   /* Reset transformation */
+        order: -1;
+        width: 40%  /* Moves the logo to the first position */
+    }
+
+    .nav-left, .nav-right {
+        display: none; /* Hide normal nav */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        background-color: black;
+        text-align: center;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-links ul li {
+        padding: 10px 0;
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger menu */
+        position: absolute;
+        right: 20px;
+        top: 9px;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    /* Move Logo to the Top */
+    .logo {
+        padding-top: 2px;
+        padding-left: 10px;
+        position:static;
+        transform: none;   /* Reset transformation */
+        order: -1;
+        width: 40%  /* Moves the logo to the first position */
+    }
+
+    .nav-left {
+        display: none; /* Hide normal nav */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        background-color: black;
+        text-align: center;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-links ul li {
+        padding: 10px 0;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Minimum height to fill the viewport */
+}
+
+.flexbox{
+    display:flex;
+    flex-direction: row;
+}
+
+main{ 
+    flex: 1;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: right;
+    padding: 30px;
+    padding-right: 10px;
+    font-size: 8px;
+}

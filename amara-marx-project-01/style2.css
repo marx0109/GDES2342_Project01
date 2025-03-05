@@ -1,0 +1,207 @@
+.genre-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Keeps "View More" on the right */
+    padding: 0 35px;
+}
+
+.genre-header h2,
+.genre-header p {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.choose-genre{
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+    width: 100%;
+    align-items: left;
+    gap: 5px;
+}
+
+.genre{
+    display: flex;
+    flex-direction: column;  /* Stack image & text vertically */
+    align-items: center;
+    justify-content: center;
+    width: 15%;  /* Set a consistent width */
+    text-align: center;
+}
+
+.genre img {
+    width: 100px;  /* Make the image fit the genre container */
+    height: 100px; /* Set a consistent height */
+}
+
+.book-genre{
+    text-align: center;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    padding-bottom: 60px;
+}
+
+
+.view-all {
+    margin-left: auto;
+    text-decoration: underline;
+    color:#C64F4F;
+    font-weight: bold;
+}
+
+
+.section-description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 35px;
+    margin-right: 35px;
+    padding-top: 0px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: -10px;
+    padding-left: 35px;;
+}
+
+.section-header::after {
+    content: "";
+    flex-grow: 1; /* Makes the line extend */
+    height: 1.5px;
+    background-color: black; /* Adjust line color */
+    margin-left: 15px; /* Space between text and line */
+    margin-right: 30px;
+}
+
+.view-more {
+    margin-left: auto;
+    text-decoration: underline;
+    color:#C64F4F;
+    font-weight: bold;
+}
+
+.book-section {
+    margin: 10px;
+    margin-left: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 0;
+}
+
+
+.book-container {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.book-row {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    padding-bottom: 0px; /* Space for hidden scrollbar */
+    padding-left: 22px;
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+    max-width: 90vw; /* Adjust width to fit content */
+}
+
+.book-row::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in Chrome/Safari */
+}
+
+.book-item {
+    flex: 0 0 auto; /* Prevents shrinking & wrapping */
+    width: 150px; /* Adjust book size */
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.book-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.book-item img:hover {
+    transform: scale(1.05);
+}
+
+.book-title {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.book-author {
+    font-size: 0.9em;
+    color: gray;
+}
+
+/* Scroll Buttons */
+.scroll-left, .scroll-right {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    top: 30%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-left { left: -20px; }
+.scroll-right { right: -20px; }
+
+.scroll-left:hover, .scroll-right:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.all-books{
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 40px 40px;
+    margin: 0 auto;
+    justify-content: center;
+    background-color:#c64f4f1d;
+    border-radius: 20px;
+    border: 4px dotted #d8333376;
+}
+
+.all-books .book-item{
+    width: 100px;
+    padding-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .genre img {
+        width: 60px;  /* Make the image fit the genre container */
+        height: 60px; /* Set a consistent height */
+    }
+    .choose-genre{
+        flex-wrap: wrap;
+    }
+    .dot{
+        display: none;
+    }
+}
