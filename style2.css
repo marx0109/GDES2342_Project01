@@ -1,7 +1,7 @@
 .genre-header {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Keeps "View More" on the right */
+    justify-content: space-between;
     padding: 0 35px;
 }
 
@@ -23,16 +23,20 @@
 
 .genre{
     display: flex;
-    flex-direction: column;  /* Stack image & text vertically */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 15%;  /* Set a consistent width */
+    width: 15%; 
     text-align: center;
 }
 
 .genre img {
-    width: 100px;  /* Make the image fit the genre container */
-    height: 100px; /* Set a consistent height */
+    width: 100px;
+    height: 100px;
+}
+
+.genre img:hover {
+    transform: scale(1.05);
 }
 
 .book-genre{
@@ -77,8 +81,8 @@
     content: "";
     flex-grow: 1; /* Makes the line extend */
     height: 1.5px;
-    background-color: black; /* Adjust line color */
-    margin-left: 15px; /* Space between text and line */
+    background-color: black; 
+    margin-left: 15px;
     margin-right: 30px;
 }
 
@@ -109,7 +113,7 @@
     gap: 10px;
     overflow-x: auto; /* Enables horizontal scrolling */
     padding-bottom: 0px; /* Space for hidden scrollbar */
-    padding-left: 22px;
+    padding-left: 40px;
     scroll-behavior: smooth; /* Smooth scrolling effect */
     scrollbar-width: none; /* Hides scrollbar in Firefox */
     max-width: 90vw; /* Adjust width to fit content */
@@ -121,7 +125,7 @@
 
 .book-item {
     flex: 0 0 auto; /* Prevents shrinking & wrapping */
-    width: 150px; /* Adjust book size */
+    width: 150px;
     text-align: center;
     text-decoration: none;
     color: inherit;
@@ -129,7 +133,6 @@
 
 .book-item img {
     width: 100%;
-    border-radius: 10px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -149,7 +152,7 @@
 
 /* Scroll Buttons */
 .scroll-left, .scroll-right {
-    position: absolute;
+    position:absolute;
     background: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
@@ -167,8 +170,8 @@
     justify-content: center;
 }
 
-.scroll-left { left: -20px; }
-.scroll-right { right: -20px; }
+.scroll-left { left: 0px; }
+.scroll-right { right: 0px; }
 
 .scroll-left:hover, .scroll-right:hover {
     background: rgba(0, 0, 0, 0.8);

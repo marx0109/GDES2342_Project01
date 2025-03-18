@@ -15,9 +15,10 @@ main {
 }
 
 main .book{
-    height: 550px;
-    margin-top: 0;
-    margin-left: 40px;
+    height: 505px;
+    margin-top: 25px;
+    margin-left: 80px;
+    margin-right: 30px;
 }
 
 .text{
@@ -61,7 +62,7 @@ main .book{
     border: none; /* Removes default styling */
     border-top: 2px solid #ccc; /* Creates a solid line */
     margin: 10px 0; /* Adjusts spacing above and below */
-    width: 400px; /* Ensures it spans the full width of its container */
+    width: 510px; /* Ensures it spans the full width of its container */
 }
 
 
@@ -104,7 +105,7 @@ main .book{
 
 .cart{
     width: 15%;
-    height: 930px; /* Allows it to expand */
+    height: 950px; /* Allows it to expand */
     text-align: center;
     background-color: rgba(198,79,79,0.56);
     position: absolute;
