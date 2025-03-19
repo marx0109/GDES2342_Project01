@@ -33,6 +33,7 @@
 .genre img {
     width: 100px;
     height: 100px;
+    margin-bottom: -15px;
 }
 
 .genre img:hover {
